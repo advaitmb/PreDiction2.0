@@ -1,0 +1,1 @@
+{"key":[16,84,69,83,84],"userText":["","","T","Te","Tes","Test"],"suggestionText":["","","","","",""],"selectionStart":[0,0,1,2,3],"selectionEnd":[0,0,1,2,3],"acceptedSuggestion":["","","","",""],"duration":[1626711269439,152,167,185,104,2080],"isArc":[false,false,false,false,false]}

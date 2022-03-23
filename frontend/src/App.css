@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Fira+Sans&display=swap');
+
+.App > div {
+  display: grid;
+  grid-template-columns: 1fr 0.5in [start] 1.25in [timer-start] 1.25in 5in 1.25in [button-start] 1.25in [end] 0.5in 1fr;
+  grid-template-rows: 1vh [button-top] 0.1in [timer] 0.3in [star] 91vh [en] 1fr;
+  /* height: 100vh; */
+  padding: 0px;
+  margin: 0px;
+  column-gap: 10px;
+  row-gap: 10px;
+  background-color: #ededed;
+  caret-color: #007eda;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#userText {
+  grid-column: start / end;
+  grid-row: star / en;
+  padding: 0.1in;
+  padding-left: 3.7vw;
+  padding-right: 3.7vw;
+  padding-top: 4vw;
+  padding-bottom: 1.5vw;
+  resize: none;
+  color: black;
+  font-family: "Fira Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 0.028em;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  overflow: hidden;
+}
+
+.mid {
+  border-radius: 3px 3px 3px 0px;
+  filter: drop-shadow(0px 4px 7px rgba(0, 0, 0, 0.1));
+}
+.end {
+  border-radius: 0px 3px 3px 0px;
+}
+
+#interpunct {
+  color: rgba(0, 126, 218, 0.2);
+}
+
+#first {
+  color: #007eda;
+}
+
+#suggestionBox {
+
+  background-color: #e5f4ff;
+  border: none;
+
+  color: rgba(0, 126, 218, 0.6);
+  padding-right: 8px;
+  height: 16px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Fira Code", monospace;
+  line-height: 17px;
+  font-weight: 500;
+  font-size: 17px;
+
+
+}
+
+#boundingBoxCalculator {
+  grid-column: start / end;
+  grid-row: star / en;
+  padding: 0.1in;
+  padding-left: 3.7vw;
+  padding-right: 3.7vw;
+  padding-top: 4vw;
+  padding-bottom: 1.5vw;
+  resize: none;
+  color: black;
+  font-family: "Fira Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 0.028em;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  overflow: hidden;
+  z-index: -10;
+}
+#suggestionText {
+  width:70%;
+  color: rgb(137, 142, 206);
+  font-family: 'Fira Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 0.028em;
+  min-height: 10in;
+  padding: 4vw;
+  cursor: text;
+  pointer-events: none;
+  border-radius: 0px;
+  border-width: 1px;
+  hyphens: auto;
+  position:fixed;
+  left:10%;
+  top: 40px;
+}
+
+:focus {
+  outline: 0px;
+}
+
+.stopWatch{
+  grid-column: start / timer-start;
+  grid-row: timer / star;
+  text-align: center;
+  height: 0.23in;
+  padding-top: 7px;
+  letter-spacing: 0.040em;
+  color: rgba(0, 0, 0, 0.993);
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+  border-radius: 3px;
+  font-size: 12px; 
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  border: none;
+}
+
+.submitButton {
+  grid-column: button-start / end;
+  grid-row: button-top / star;
+  color: rgba(255, 255, 255, 0.993);
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+  border-radius: 3px;
+  font-size: 12px;
+  letter-spacing: 0.040em;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: rgb(0, 0, 0);
+  border: none;
+}
+
+button:hover {
+  color: rgba(122, 202, 255, 0.9);
+}
